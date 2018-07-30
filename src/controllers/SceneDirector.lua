@@ -1,5 +1,6 @@
 local MainMenuScene = require "scenes.MainMenuScene"
 local ConfigurationScene = require "scenes.ConfigurationScene"
+local InGameScene = require "scenes.InGameScene"
 
 local SceneDirector = {}
 
@@ -10,13 +11,14 @@ function SceneDirector:new()
         currentScene = nil, 
         mainMenu = MainMenuScene:new(),
         configurationScene = ConfigurationScene:new(),
+        inGame = InGameScene:new(),
         sceneObjects = {},
         sceneStack = gameDirector:getLibraries("Stack"):new()
     }
 
     this.currentScene = this.mainMenu
     this.sceneObjects["mainMenu"] = this.mainMenu
-    this.sceneObjects["inGame"] = gameDirector
+    this.sceneObjects["inGame"] = this.inGame
     this.sceneObjects["configurations"] = this.configurationScene
 
     scaleDimension:setGameScreenScale(800, 600)

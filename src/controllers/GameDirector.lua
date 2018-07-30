@@ -1,9 +1,6 @@
 --Models
 local World = require "models.business.World"
 
---Actors
-local Bullet = require "models.actors.Bullet"
-
 --Util
 local SpriteSheet = require "util.SpriteSheet"
 local SpriteAnimation = require "util.SpriteAnimation"

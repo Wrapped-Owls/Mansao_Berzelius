@@ -44,14 +44,6 @@ function MainMenuScene:new()
     return setmetatable(this, MainMenuScene)
 end
 
-function MainMenuScene:keypressed(key, scancode, isrepeat)
-    self.buttonManager:keypressed(key, scancode, isrepeat)
-end
-
-function MainMenuScene:keyreleased(key, scancode)
-    self.buttonManager:keyreleased(key, scancode)
-end
-
 function MainMenuScene:mousemoved(x, y, dx, dy, istouch)
     self.buttonManager:mousemoved(x, y, dx, dy, istouch)
 end
